@@ -3,8 +3,29 @@
 namespace noecs\alipay;
 
 /**
- * This file is pay base class
+ * This file is pay base class,config
  * @author noecs<noecs@qq.com>
+ *
+ * config add `main.php` or `main-local.php` array `components`
+ *  'alipay' => [
+ *       'class' => 'noecs\alipay\Alipay',
+ *       
+ *       //应用ID,您的APPID。
+ *       'app_id' => "",
+ *       
+ *       //商户私钥
+ *       'merchant_private_key' => "",
+ *       
+ *       //异步通知地址
+ *       'notify_url' => "",
+ *       
+ *       //同步跳转
+ *       'return_url' => "",
+ *
+ *       //支付宝公钥,查看地址：https://openhome.alipay.com/platform/keyManage.htm 对应APPID下的支付宝公钥。
+ *       'alipay_public_key' => "",
+ *   ],
+ * 
  */
 class Alipay extends \yii\base\Widget
 {
@@ -48,5 +69,8 @@ class Alipay extends \yii\base\Widget
      */
     public $alipay_public_key;
 
-
+    public function __construct()
+    {
+        var_dump($this);die;
+    }
 }
