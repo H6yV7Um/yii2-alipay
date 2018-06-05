@@ -69,4 +69,8 @@ class Config
      */
     public $alipay_public_key;
 
+    /**
+     * @param alipay api name
+     */
+    public $method;
 }
